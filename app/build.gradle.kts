@@ -10,9 +10,21 @@ plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     id("org.jetbrains.kotlin.jvm") version "1.5.31"
 
+    id("com.github.johnrengelman.shadow") version "7.1.2"
+    id("java")
+
     // Apply the application plugin to add support for building a CLI application in Java.
     application
 }
+
+base {
+    archivesName.set("argo-client-kotlin")
+}
+
+group = "jp.datable"
+version = "0.0.1-SNAPSHOT"
+description = "argo.workflow.client"
+java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     // Use Maven Central for resolving dependencies.
