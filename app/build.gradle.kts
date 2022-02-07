@@ -13,6 +13,8 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("java")
 
+    `maven-publish`
+
     // Apply the application plugin to add support for building a CLI application in Java.
     application
 }
@@ -51,4 +53,22 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass.set("jp.datable.argo.workflow.client.AppKt")
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+        }
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/datable-inc/argo-client-kotlin")
+            credentials {
+                username = System.getenv("GITHUB_ACTOR")
+                password = System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
