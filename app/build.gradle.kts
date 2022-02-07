@@ -14,9 +14,6 @@ plugins {
     id("java")
 
     `maven-publish`
-
-    // Apply the application plugin to add support for building a CLI application in Java.
-    application
 }
 
 java.sourceCompatibility = JavaVersion.VERSION_11
@@ -36,6 +33,13 @@ dependencies {
     // This dependency is used by the application.
     implementation("com.google.guava:guava:30.1.1-jre")
 
+    implementation("com.michael-bull.kotlin-result:kotlin-result:1.1.14")
+    implementation("com.squareup.okhttp3:okhttp:4.5.0")
+    implementation("org.springframework:spring-web:5.3.15")
+
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    implementation("com.google.code.gson:gson:2.8.9")
+
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 
@@ -43,16 +47,11 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
 }
 
-application {
-    // Define the main class for the application.
-    mainClass.set("jp.datable.argo.workflow.client.AppKt")
-}
-
 publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "jp.datable"
-            artifactId = "argo.workflow.client"
+            artifactId = "argo-workflow-client"
             version = "0.0.1-SNAPSHOT"
 
             from(components["java"])
