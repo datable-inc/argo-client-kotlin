@@ -63,6 +63,10 @@ tasks.withType<ShadowJar> {
 publishing {
     publications {
         create<MavenPublication>("maven") {
+            groupId = "jp.datable"
+            artifactId = "argo.workflow.client"
+            version = "0.0.1-SNAPSHOT"
+
             from(components["java"])
         }
     }
