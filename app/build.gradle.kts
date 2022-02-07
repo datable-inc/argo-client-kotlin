@@ -5,7 +5,6 @@
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
  * User Manual available at https://docs.gradle.org/7.3/userguide/building_java_projects.html
  */
-import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
@@ -20,14 +19,7 @@ plugins {
     application
 }
 
-base {
-    archivesName.set("argo-client-kotlin")
-}
-
-group = "jp.datable"
-version = "0.0.1-SNAPSHOT"
-description = "argo.workflow.client"
-java.sourceCompatibility = JavaVersion.VERSION_1_8
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -54,10 +46,6 @@ dependencies {
 application {
     // Define the main class for the application.
     mainClass.set("jp.datable.argo.workflow.client.AppKt")
-}
-
-tasks.withType<ShadowJar> {
-    archiveBaseName.set("argo-client-kotlin")
 }
 
 publishing {
