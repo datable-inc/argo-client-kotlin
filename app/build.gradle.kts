@@ -13,6 +13,8 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("java")
 
+    id("com.diffplug.spotless") version "6.2.1"
+
     `maven-publish`
 }
 
@@ -52,7 +54,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "jp.datable"
             artifactId = "argo-workflow-client"
-            version = "0.0.1-SNAPSHOT"
+            version = "0.0.1"
 
             from(components["java"])
         }
