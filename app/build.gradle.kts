@@ -33,7 +33,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // This dependency is used by the application.
-    implementation("com.google.guava:guava:30.1.1-jre")
+    implementation("com.google.guava:guava:31.0.1-jre")
 
     implementation("com.michael-bull.kotlin-result:kotlin-result:1.1.14")
     implementation("com.squareup.okhttp3:okhttp:4.5.0")
