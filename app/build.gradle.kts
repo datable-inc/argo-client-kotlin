@@ -13,7 +13,7 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("java")
 
-    id("com.diffplug.spotless") version "6.2.1"
+    id("com.diffplug.spotless") version "6.2.2"
 
     `maven-publish`
 }
