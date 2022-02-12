@@ -5,7 +5,10 @@
 
 name: Publish package to GitHub Packages
 
-on: [push]
+on:
+  push:
+    tags:
+      - v*
 
 jobs:
   publish:
