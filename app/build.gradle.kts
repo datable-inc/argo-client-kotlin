@@ -36,7 +36,7 @@ dependencies {
     implementation("com.google.guava:guava:30.1.1-jre")
 
     implementation("com.michael-bull.kotlin-result:kotlin-result:1.1.14")
-    implementation("com.squareup.okhttp3:okhttp:4.5.0")
+    implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("org.springframework:spring-web:5.3.15")
 
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
