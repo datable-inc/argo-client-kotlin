@@ -20,8 +20,6 @@ plugins {
     `maven-publish`
 }
 
-java.sourceCompatibility = JavaVersion.VERSION_11
-
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -62,6 +60,12 @@ configure<SpotlessExtension> {
     }
     kotlinGradle {
         ktlint()
+    }
+}
+
+kotlin {
+    jvmToolchain {
+        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
