@@ -3,24 +3,20 @@ package jp.datable.argo.workflow.client.apis.cronWorkflowApi
 import com.github.michaelbull.result.Result
 import com.github.michaelbull.result.andThen
 import jp.datable.argo.workflow.client.apis.BaseApi
+import jp.datable.argo.workflow.client.https.HttpClient
 import jp.datable.argo.workflow.client.https.HttpResponse
 import jp.datable.argo.workflow.client.models.CreateCronWorkflowRequest
 import jp.datable.argo.workflow.client.models.CronWorkflow
 import jp.datable.argo.workflow.client.models.CronWorkflows
-import jp.datable.argo.workflow.client.https.HttpClient
 import okhttp3.Call
 import org.springframework.http.HttpMethod
 
-class CronWorkflowApi(
-    httpClient: HttpClient
-) : BaseApi(httpClient) {
+class CronWorkflowApi(httpClient: HttpClient) : BaseApi(httpClient) {
     companion object {
         private const val CRON_WORKFLOWS_PATH = "cron-workflows"
     }
 
-    /**
-     * GET /api/v1/cron-workflows/{namespace}/{name}
-     */
+    /** GET /api/v1/cron-workflows/{namespace}/{name} */
     fun getCronWorkflow(
         namespace: String,
         name: String
@@ -42,12 +38,8 @@ class CronWorkflowApi(
         }
     }
 
-    /**
-     * GET /api/v1/cron-workflows/{namespace}
-     */
-    fun getCronWorkflows(
-        namespace: String
-    ): Result<HttpResponse<CronWorkflows>, Exception> {
+    /** GET /api/v1/cron-workflows/{namespace} */
+    fun getCronWorkflows(namespace: String): Result<HttpResponse<CronWorkflows>, Exception> {
         return getCronWorkflowsWithHttpInfo(namespace)
     }
 
@@ -64,9 +56,7 @@ class CronWorkflowApi(
         }
     }
 
-    /**
-     * POST /api/v1/cron-workflows/{namespace}
-     */
+    /** POST /api/v1/cron-workflows/{namespace} */
     fun createCronWorkflow(
         namespace: String,
         body: CreateCronWorkflowRequest
@@ -74,7 +64,10 @@ class CronWorkflowApi(
         return createCronWorkflowWithHttpInfo(namespace, body)
     }
 
-    private fun createCronWorkflowCall(namespace: String, body: CreateCronWorkflowRequest): Result<Call, Exception> {
+    private fun createCronWorkflowCall(
+        namespace: String,
+        body: CreateCronWorkflowRequest
+    ): Result<Call, Exception> {
         val path = buildCronWorkflowsPath(namespace)
         return httpClient.buildCall(path, HttpMethod.POST, null, body)
     }
@@ -88,9 +81,7 @@ class CronWorkflowApi(
         }
     }
 
-    /**
-     * PUT /api/v1/cron-workflows/{namespace}/{name}/suspend
-     */
+    /** PUT /api/v1/cron-workflows/{namespace}/{name}/suspend */
     fun suspendCronWorkflow(
         namespace: String,
         name: String
@@ -112,9 +103,7 @@ class CronWorkflowApi(
         }
     }
 
-    /**
-     * PUT /api/v1/cron-workflows/{namespace}/{name}/resume
-     */
+    /** PUT /api/v1/cron-workflows/{namespace}/{name}/resume */
     fun resumeCronWorkflow(
         namespace: String,
         name: String
@@ -136,9 +125,7 @@ class CronWorkflowApi(
         }
     }
 
-    /**
-     * DELETE /api/v1/cron-workflows/{namespace}/{name}
-     */
+    /** DELETE /api/v1/cron-workflows/{namespace}/{name} */
     fun deleteCronWorkflow(
         namespace: String,
         name: String
@@ -161,23 +148,27 @@ class CronWorkflowApi(
     }
 
     private fun buildCronWorkflowsPath(namespace: String): String {
-        return StringBuilder().also {
-            it.append(BASE_PATH)
-            it.append(CRON_WORKFLOWS_PATH)
-            it.append("/")
-            it.append(namespace)
-        }.toString()
+        return StringBuilder()
+            .also {
+                it.append(BASE_PATH)
+                it.append(CRON_WORKFLOWS_PATH)
+                it.append("/")
+                it.append(namespace)
+            }
+            .toString()
     }
 
     private fun buildCronWorkflowPath(namespace: String, name: String): String {
-        return StringBuilder().also {
-            it.append(BASE_PATH)
-            it.append(CRON_WORKFLOWS_PATH)
-            it.append("/")
-            it.append(namespace)
-            it.append("/")
-            it.append(name)
-        }.toString()
+        return StringBuilder()
+            .also {
+                it.append(BASE_PATH)
+                it.append(CRON_WORKFLOWS_PATH)
+                it.append("/")
+                it.append(namespace)
+                it.append("/")
+                it.append(name)
+            }
+            .toString()
     }
 
     private fun buildSuspendCronWorkflowPath(namespace: String, name: String): String {

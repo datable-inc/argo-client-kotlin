@@ -5,6 +5,7 @@
  * For more details take a look at the 'Building Java & JVM projects' chapter in the Gradle
  * User Manual available at https://docs.gradle.org/7.3/userguide/building_java_projects.html
  */
+import com.diffplug.gradle.spotless.SpotlessExtension
 
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
@@ -13,7 +14,8 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("java")
 
-    id("com.diffplug.spotless") version "6.2.2"
+    // Spotless plugin for checking style of code.
+    id("com.diffplug.spotless") version "6.3.0"
 
     `maven-publish`
 }
@@ -37,7 +39,7 @@ dependencies {
 
     implementation("com.michael-bull.kotlin-result:kotlin-result:1.1.14")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
-    implementation("org.springframework:spring-web:5.3.15")
+    implementation("org.springframework:spring-web:5.3.16")
 
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation("com.google.code.gson:gson:2.9.0")
@@ -47,6 +49,20 @@ dependencies {
 
     // Use the Kotlin JUnit integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
+}
+
+// Configure Spotless plugin for style checking code.
+configure<SpotlessExtension> {
+    kotlin {
+        ktfmt()
+        ktlint()
+        // TODO: should be comment-in
+//        diktat()
+//        prettier()
+    }
+    kotlinGradle {
+        ktlint()
+    }
 }
 
 publishing {

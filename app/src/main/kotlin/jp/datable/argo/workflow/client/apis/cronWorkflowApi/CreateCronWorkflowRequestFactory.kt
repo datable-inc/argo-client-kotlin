@@ -17,14 +17,8 @@ class CreateCronWorkflowRequestFactory() {
         val labels: Map<String, String>,
     )
 
-    data class SpecRequest(
-        val entrypoint: String,
-        val templateRequest: TemplateRequest
-    ) {
-        data class TemplateRequest(
-            val name: String,
-            val containerRequest: ContainerRequest
-        ) {
+    data class SpecRequest(val entrypoint: String, val templateRequest: TemplateRequest) {
+        data class TemplateRequest(val name: String, val containerRequest: ContainerRequest) {
             data class ContainerRequest(
                 val image: String,
                 val command: List<String>,
@@ -42,7 +36,8 @@ class CreateCronWorkflowRequestFactory() {
                 CronWorkflow(
                     apiVersion = null,
                     kind = null,
-                    metadata = ObjectMeta(
+                    metadata =
+                    ObjectMeta(
                         name = metadataRequest.name,
                         generateName = metadataRequest.generateName,
                         namespace = metadataRequest.namespace,
@@ -53,25 +48,39 @@ class CreateCronWorkflowRequestFactory() {
                         creationTimestamp = null,
                         annotations = null
                     ),
-                    spec = CronWorkflowSpec(
+                    spec =
+                    CronWorkflowSpec(
                         schedule = "* * * * *",
-                        workflowSpec = WorkflowSpec(
+                        workflowSpec =
+                        WorkflowSpec(
                             entrypoint = specRequest.entrypoint,
-                            templates = listOf(
+                            templates =
+                            listOf(
                                 Template(
                                     name = specRequest.templateRequest.name,
-                                    container = Container(
-                                        image = specRequest.templateRequest.containerRequest.image,
-                                        command = specRequest.templateRequest.containerRequest.command,
-                                        args = specRequest.templateRequest.containerRequest.args
+                                    container =
+                                    Container(
+                                        image =
+                                        specRequest
+                                            .templateRequest
+                                            .containerRequest
+                                            .image,
+                                        command =
+                                        specRequest
+                                            .templateRequest
+                                            .containerRequest
+                                            .command,
+                                        args =
+                                        specRequest
+                                            .templateRequest
+                                            .containerRequest
+                                            .args
                                     )
                                 )
                             )
                         )
                     ),
-                    status = CronWorkflowStatus(
-                        lastScheduleTime = null
-                    )
+                    status = CronWorkflowStatus(lastScheduleTime = null)
                 )
             )
         }

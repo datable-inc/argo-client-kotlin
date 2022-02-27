@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "gradle"
-    directory: "/app"
+  - package-ecosystem: gradle
+    directory: app
     schedule:
-      interval: "daily"
+      interval: daily
