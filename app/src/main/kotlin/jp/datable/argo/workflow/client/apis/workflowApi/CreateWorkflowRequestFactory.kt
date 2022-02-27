@@ -15,14 +15,8 @@ class CreateWorkflowRequestFactory() {
         val labels: Map<String, String>,
     )
 
-    data class SpecRequest(
-        val entrypoint: String,
-        val templateRequest: TemplateRequest
-    ) {
-        data class TemplateRequest(
-            val name: String,
-            val containerRequest: ContainerRequest
-        ) {
+    data class SpecRequest(val entrypoint: String, val templateRequest: TemplateRequest) {
+        data class TemplateRequest(val name: String, val containerRequest: ContainerRequest) {
             data class ContainerRequest(
                 val image: String,
                 val command: List<String>,
@@ -40,7 +34,8 @@ class CreateWorkflowRequestFactory() {
                 Workflow(
                     apiVersion = null,
                     kind = null,
-                    metadata = ObjectMeta(
+                    metadata =
+                    ObjectMeta(
                         name = metadataRequest.name,
                         generateName = metadataRequest.generateName,
                         namespace = metadataRequest.namespace,
@@ -51,15 +46,21 @@ class CreateWorkflowRequestFactory() {
                         creationTimestamp = null,
                         annotations = null
                     ),
-                    spec = WorkflowSpec(
+                    spec =
+                    WorkflowSpec(
                         entrypoint = specRequest.entrypoint,
-                        templates = listOf(
+                        templates =
+                        listOf(
                             Template(
                                 name = specRequest.templateRequest.name,
-                                container = Container(
-                                    image = specRequest.templateRequest.containerRequest.image,
-                                    command = specRequest.templateRequest.containerRequest.command,
-                                    args = specRequest.templateRequest.containerRequest.args
+                                container =
+                                Container(
+                                    image =
+                                    specRequest.templateRequest.containerRequest.image,
+                                    command =
+                                    specRequest.templateRequest.containerRequest.command,
+                                    args =
+                                    specRequest.templateRequest.containerRequest.args
                                 )
                             )
                         )

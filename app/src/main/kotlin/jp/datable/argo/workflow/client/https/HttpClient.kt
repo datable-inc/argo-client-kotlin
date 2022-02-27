@@ -15,18 +15,15 @@ import okhttp3.Response
 import org.springframework.http.HttpMethod
 import java.lang.reflect.Type
 
-class HttpClient private constructor(
+class HttpClient
+private constructor(
     private val endpointHost: String,
     private val header: HttpHeader,
     private val httpClient: OkHttpClient
 ) {
     companion object {
         fun connect(endpointHost: String, header: HttpHeader): HttpClient {
-            return HttpClient(
-                endpointHost,
-                header,
-                OkHttpClient.Builder().build()
-            )
+            return HttpClient(endpointHost, header, OkHttpClient.Builder().build())
         }
     }
 
@@ -47,11 +44,7 @@ class HttpClient private constructor(
         body: T
     ): Result<Call, Exception> {
         return try {
-            Ok(
-                buildRequest(path, method, queryParams, body).let {
-                    httpClient.newCall(it)
-                }
-            )
+            Ok(buildRequest(path, method, queryParams, body).let { httpClient.newCall(it) })
         } catch (e: Exception) {
             Err(e)
         }
@@ -65,10 +58,7 @@ class HttpClient private constructor(
     ): Request {
         val url = buildUrl(path, queryParams)
         val requestBody = serialize(body = body, contentType = "application/json")
-        val requestBuilder = Request
-            .Builder()
-            .url(url)
-            .headers(header.toOkHttpHeader())
+        val requestBuilder = Request.Builder().url(url).headers(header.toOkHttpHeader())
 
         return when (method) {
             HttpMethod.GET -> requestBuilder.get().build()
@@ -85,21 +75,17 @@ class HttpClient private constructor(
             .scheme("https")
             .host(endpointHost)
             .addPathSegments(path)
-            .also { builder ->
-                queryParams?.forEach {
-                    builder.addQueryParameter(it.first, it.second)
-                }
-            }.build()
+            .also { builder -> queryParams?.forEach { builder.addQueryParameter(it.first, it.second) } }
+            .build()
     }
 
     private fun <T> deserialize(response: Response, returnType: Type): T {
-        return Gson().fromJson(requireNotNull(response.body) { "body should not be null" }.string(), returnType)
+        return Gson()
+            .fromJson(requireNotNull(response.body) { "body should not be null" }.string(), returnType)
     }
 
     private fun <T> serialize(body: T, contentType: String): RequestBody {
-        return Gson().toJson(body).let {
-            it.toRequestBody(contentType.toMediaTypeOrNull())
-        }
+        return Gson().toJson(body).let { it.toRequestBody(contentType.toMediaTypeOrNull()) }
     }
 
     private fun <T> handleResponse(response: Response, returnType: Type): T {
