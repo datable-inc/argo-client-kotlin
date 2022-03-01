@@ -20,8 +20,6 @@ plugins {
     `maven-publish`
 }
 
-java.sourceCompatibility = JavaVersion.VERSION_11
-
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
@@ -35,7 +33,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     // This dependency is used by the application.
-    implementation("com.google.guava:guava:31.0.1-jre")
+    implementation("com.google.guava:guava:31.1-jre")
 
     implementation("com.michael-bull.kotlin-result:kotlin-result:1.1.14")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
@@ -65,12 +63,18 @@ configure<SpotlessExtension> {
     }
 }
 
+kotlin {
+    jvmToolchain {
+        (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "jp.datable"
             artifactId = "argo-workflow-client"
-            version = "0.0.5"
+            version = "0.0.6"
 
             from(components["java"])
         }
