@@ -6,9 +6,9 @@
 name: Publish package to GitHub Packages
 
 on:
-  create:
-    tags:
-      - v*
+  push:
+    branches:
+      - main
 
 jobs:
   publish:
