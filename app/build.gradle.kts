@@ -74,7 +74,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "jp.datable"
             artifactId = "argo-workflow-client"
-            version = "0.0.6"
+            version = "0.0.7"
 
             from(components["java"])
         }
