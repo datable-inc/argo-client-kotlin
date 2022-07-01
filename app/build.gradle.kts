@@ -15,7 +15,7 @@ plugins {
     id("java")
 
     // Spotless plugin for checking style of code.
-    id("com.diffplug.spotless") version "6.4.2"
+    id("com.diffplug.spotless") version "6.8.0"
 
     `maven-publish`
 }
