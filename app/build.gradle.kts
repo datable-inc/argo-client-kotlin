@@ -80,6 +80,15 @@ openApiGenerate {
     additionalProperties.set(mapOf("serializationLibrary" to "gson"))
 }
 
+tasks.register<Copy>("copyGeneratedModels") {
+    from("$buildDir/generated/src/main/kotlin/jp/datable/argo/workflow/client/models")
+    into("$rootDir/app/src/main/kotlin/jp/datable/argo/workflow/client/models")
+}
+
+tasks.register<GradleBuild>("generateModels") {
+    tasks = listOf("clean", "openApiGenerate", "copyGeneratedModels")
+}
+
 publishing {
     publications {
         create<MavenPublication>("maven") {
