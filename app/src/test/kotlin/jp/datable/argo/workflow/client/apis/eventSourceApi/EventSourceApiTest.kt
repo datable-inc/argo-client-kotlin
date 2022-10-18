@@ -5,8 +5,10 @@ import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
 import jp.datable.argo.workflow.client.https.HttpClient
 import jp.datable.argo.workflow.client.https.HttpHeader
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore("This test is ignored because it requires a real Argo server.")
 internal class EventSourceApiTest {
 
     @Test
