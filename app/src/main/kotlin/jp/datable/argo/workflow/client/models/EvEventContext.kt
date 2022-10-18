@@ -6,6 +6,6 @@ data class EvEventContext(
     val source: String?,
     val specversion: String?,
     val subject: String?,
-    val time: java.time.OffsetDateTime?,
+    val time: String?,
     val type: String?
 )

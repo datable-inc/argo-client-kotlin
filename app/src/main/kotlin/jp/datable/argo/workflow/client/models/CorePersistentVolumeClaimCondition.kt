@@ -3,8 +3,8 @@ package jp.datable.argo.workflow.client.models
 data class CorePersistentVolumeClaimCondition(
     val status: String,
     val type: CorePersistentVolumeClaimCondition.Type,
-    val lastProbeTime: java.time.OffsetDateTime?,
-    val lastTransitionTime: java.time.OffsetDateTime?,
+    val lastProbeTime: String?,
+    val lastTransitionTime: String?,
     val message: String?,
     val reason: String?
 ) {

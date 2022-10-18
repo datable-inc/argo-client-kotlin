@@ -7,6 +7,6 @@ data class SensorLogEntry(
     val msg: String?,
     val namespace: String?,
     val sensorName: String?,
-    val time: java.time.OffsetDateTime?,
+    val time: String?,
     val triggerName: String?
 )

@@ -7,5 +7,5 @@ data class EventsourceLogEntry(
     val level: String?,
     val msg: String?,
     val namespace: String?,
-    val time: java.time.OffsetDateTime?
+    val time: String?
 )

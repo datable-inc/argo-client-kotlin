@@ -7,5 +7,5 @@ data class MetaManagedFieldsEntry(
     val manager: String?,
     val operation: String?,
     val subresource: String?,
-    val time: java.time.OffsetDateTime?
+    val time: String?
 )

@@ -6,7 +6,7 @@ data class WfWorkflowStatus(
     val compressedNodes: String?,
     val conditions: List<WfCondition>?,
     val estimatedDuration: Int?,
-    val finishedAt: java.time.OffsetDateTime?,
+    val finishedAt: String?,
     val message: String?,
     val nodes: Map<String, WfNodeStatus>?,
     val offloadNodeStatusVersion: String?,
@@ -15,7 +15,7 @@ data class WfWorkflowStatus(
     val phase: String?,
     val progress: String?,
     val resourcesDuration: Map<String, Long>?,
-    val startedAt: java.time.OffsetDateTime?,
+    val startedAt: String?,
     val storedTemplates: Map<String, WfTemplate>?,
     val storedWorkflowTemplateSpec: WfWorkflowSpec?,
     val synchronization: WfSynchronizationStatus?

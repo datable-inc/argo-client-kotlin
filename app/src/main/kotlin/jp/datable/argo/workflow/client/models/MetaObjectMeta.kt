@@ -3,9 +3,9 @@ package jp.datable.argo.workflow.client.models
 data class MetaObjectMeta(
     val annotations: Map<String, String>?,
     val clusterName: String?,
-    val creationTimestamp: java.time.OffsetDateTime?,
+    val creationTimestamp: String?,
     val deletionGracePeriodSeconds: Int?,
-    val deletionTimestamp: java.time.OffsetDateTime?,
+    val deletionTimestamp: String?,
     val finalizers: List<String>?,
     val generateName: String?,
     val generation: Int?,
