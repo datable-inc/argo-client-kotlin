@@ -17,6 +17,8 @@ plugins {
     // Spotless plugin for checking style of code.
     id("com.diffplug.spotless") version "6.4.2"
 
+    id("org.openapi.generator") version "6.2.0"
+
     `maven-publish`
 }
 
@@ -67,6 +69,15 @@ kotlin {
     jvmToolchain {
         (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(17))
     }
+}
+
+openApiGenerate {
+    generatorName.set("kotlin")
+    inputSpec.set("$rootDir/app/src/main/resources/argo-workflows-api.json")
+    outputDir.set("$buildDir/generated")
+    modelPackage.set("jp.datable.argo.workflow.client.models")
+    templateDir.set("$rootDir/templates")
+    additionalProperties.set(mapOf("serializationLibrary" to "gson"))
 }
 
 publishing {
