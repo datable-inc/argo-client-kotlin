@@ -36,9 +36,6 @@ import kotlinx.serialization.*
     {{#moshi}}
     @Json(name = {{^isString}}"{{/isString}}{{{value}}}{{^isString}}"{{/isString}})
     {{/moshi}}
-    {{#gson}}
-    @SerializedName(value = {{^isString}}"{{/isString}}{{{value}}}{{^isString}}"{{/isString}})
-    {{/gson}}
     {{#jackson}}
     @JsonProperty(value = {{^isString}}"{{/isString}}{{{value}}}{{^isString}}"{{/isString}})
     {{/jackson}}
