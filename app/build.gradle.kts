@@ -9,7 +9,8 @@ import com.diffplug.gradle.spotless.SpotlessExtension
 
 plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
-    id("org.jetbrains.kotlin.jvm") version "1.6.20"
+    id("org.jetbrains.kotlin.jvm") version "1.7.20"
+    id("org.jetbrains.kotlin.plugin.serialization") version "1.7.20"
 
     id("com.github.johnrengelman.shadow") version "7.1.2"
     id("java")
@@ -43,6 +44,8 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
     implementation("com.google.code.gson:gson:2.8.9")
+
+    testImplementation("com.charleskorn.kaml:kaml:0.49.0")
 
     // Use the Kotlin test library.
     testImplementation("org.jetbrains.kotlin:kotlin-test")

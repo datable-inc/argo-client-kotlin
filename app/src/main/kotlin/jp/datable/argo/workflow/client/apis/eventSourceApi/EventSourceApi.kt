@@ -25,9 +25,7 @@ class EventSourceApi(httpClient: HttpClient) : BaseApi(httpClient) {
     }
 
     private fun getEventSourcesWithHttpInfo(): Result<HttpResponse<EvEventSourceList>, Exception> {
-        return getEventSourcesCall().andThen {
-            httpClient.execute(it, EvEventSourceList::class.java)
-        }
+        return getEventSourcesCall().andThen { httpClient.execute(it, EvEventSourceList::class.java) }
     }
 
     private fun buildEventSourcesPath(): String {

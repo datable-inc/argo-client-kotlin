@@ -17,3 +17,5 @@ gradle-app.setting
 build
 
 .idea/
+
+app/src/test/resources/connection-setting.yml
