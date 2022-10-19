@@ -7,7 +7,7 @@ class ConnectionSetting {
 
     companion object {
         fun get(): Setting {
-            return javaClass.classLoader.getResourceAsStream("connection-setting.yml").use {
+            return ConnectionSetting::class.java.getResourceAsStream("connection-setting.yml").use {
                 Yaml.default.decodeFromString(it!!.readBytes().decodeToString())
             }
         }

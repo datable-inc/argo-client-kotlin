@@ -5,9 +5,9 @@ import com.github.michaelbull.result.Err
 import com.github.michaelbull.result.Ok
 import jp.datable.argo.workflow.client.https.HttpClient
 import jp.datable.argo.workflow.client.https.HttpHeader
-import jp.datable.argo.workflow.client.models.EvEventSource
-import jp.datable.argo.workflow.client.models.EventsourceUpdateEventSourceRequest
-import jp.datable.argo.workflow.client.models.MetaObjectMeta
+import jp.datable.argo.workflow.client.models.openapi.EvEventSource
+import jp.datable.argo.workflow.client.models.openapi.EventsourceUpdateEventSourceRequest
+import jp.datable.argo.workflow.client.models.openapi.MetaObjectMeta
 import org.junit.Ignore
 import org.junit.Test
 

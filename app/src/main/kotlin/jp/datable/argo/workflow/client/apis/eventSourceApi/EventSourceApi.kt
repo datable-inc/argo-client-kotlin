@@ -5,9 +5,9 @@ import com.github.michaelbull.result.andThen
 import jp.datable.argo.workflow.client.apis.BaseApi
 import jp.datable.argo.workflow.client.https.HttpClient
 import jp.datable.argo.workflow.client.https.HttpResponse
-import jp.datable.argo.workflow.client.models.EvEventSource
-import jp.datable.argo.workflow.client.models.EvEventSourceList
-import jp.datable.argo.workflow.client.models.EventsourceUpdateEventSourceRequest
+import jp.datable.argo.workflow.client.models.openapi.EvEventSource
+import jp.datable.argo.workflow.client.models.openapi.EvEventSourceList
+import jp.datable.argo.workflow.client.models.openapi.EventsourceUpdateEventSourceRequest
 import okhttp3.Call
 import org.springframework.http.HttpMethod
 
