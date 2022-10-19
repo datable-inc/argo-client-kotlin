@@ -78,7 +78,7 @@ openApiGenerate {
     generatorName.set("kotlin")
     inputSpec.set("$rootDir/app/src/main/resources/argo-workflows-api.json")
     outputDir.set("$buildDir/generated")
-    modelPackage.set("jp.datable.argo.workflow.client.models")
+    modelPackage.set("jp.datable.argo.workflow.client.models.openapi")
     templateDir.set("$rootDir/templates")
     additionalProperties.set(mapOf("serializationLibrary" to "gson"))
 }
