@@ -1,11 +1,11 @@
 package jp.datable.argo.workflow.client.models
 
 data class CoreToleration(
-    val effect: Effect?,
-    val key: String?,
-    val `operator`: `Operator`?,
-    val tolerationSeconds: Int?,
-    val `value`: String?
+    val effect: Effect? = null,
+    val key: String? = null,
+    val `operator`: `Operator`? = null,
+    val tolerationSeconds: Int? = null,
+    val `value`: String? = null
 ) {
 
     /**

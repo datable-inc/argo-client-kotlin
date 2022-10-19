@@ -2,10 +2,10 @@ package jp.datable.argo.workflow.client.models
 
 data class CoreHTTPGetAction(
     val port: String,
-    val host: String?,
-    val httpHeaders: List<CoreHTTPHeader>?,
-    val path: String?,
-    val scheme: Scheme?
+    val host: String? = null,
+    val httpHeaders: List<CoreHTTPHeader>? = null,
+    val path: String? = null,
+    val scheme: Scheme? = null
 ) {
 
     /**

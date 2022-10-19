@@ -1,15 +1,15 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvTemplate(
-    val affinity: CoreAffinity?,
-    val container: CoreContainer?,
-    val imagePullSecrets: List<CoreLocalObjectReference>?,
-    val metadata: EvMetadata?,
-    val nodeSelector: Map<String, String>?,
-    val priority: Int?,
-    val priorityClassName: String?,
-    val securityContext: CorePodSecurityContext?,
-    val serviceAccountName: String?,
-    val tolerations: List<CoreToleration>?,
-    val volumes: List<CoreVolume>?
+    val affinity: CoreAffinity? = null,
+    val container: CoreContainer? = null,
+    val imagePullSecrets: List<CoreLocalObjectReference>? = null,
+    val metadata: EvMetadata? = null,
+    val nodeSelector: Map<String, String>? = null,
+    val priority: Int? = null,
+    val priorityClassName: String? = null,
+    val securityContext: CorePodSecurityContext? = null,
+    val serviceAccountName: String? = null,
+    val tolerations: List<CoreToleration>? = null,
+    val volumes: List<CoreVolume>? = null
 )

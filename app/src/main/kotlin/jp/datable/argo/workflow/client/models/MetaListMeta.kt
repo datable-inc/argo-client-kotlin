@@ -1,8 +1,8 @@
 package jp.datable.argo.workflow.client.models
 
 data class MetaListMeta(
-    val `continue`: String?,
-    val remainingItemCount: Int?,
-    val resourceVersion: String?,
-    val selfLink: String?
+    val `continue`: String? = null,
+    val remainingItemCount: Int? = null,
+    val resourceVersion: String? = null,
+    val selfLink: String? = null
 )

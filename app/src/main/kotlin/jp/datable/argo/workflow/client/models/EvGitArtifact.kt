@@ -1,14 +1,14 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvGitArtifact(
-    val branch: String?,
-    val cloneDirectory: String?,
-    val creds: EvGitCreds?,
-    val filePath: String?,
-    val insecureIgnoreHostKey: Boolean?,
-    val ref: String?,
-    val remote: EvGitRemoteConfig?,
-    val sshKeySecret: CoreSecretKeySelector?,
-    val tag: String?,
-    val url: String?
+    val branch: String? = null,
+    val cloneDirectory: String? = null,
+    val creds: EvGitCreds? = null,
+    val filePath: String? = null,
+    val insecureIgnoreHostKey: Boolean? = null,
+    val ref: String? = null,
+    val remote: EvGitRemoteConfig? = null,
+    val sshKeySecret: CoreSecretKeySelector? = null,
+    val tag: String? = null,
+    val url: String? = null
 )

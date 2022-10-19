@@ -2,11 +2,11 @@ package jp.datable.argo.workflow.client.models
 
 data class WfHTTP(
     val url: String,
-    val body: String?,
-    val bodyFrom: WfHTTPBodySource?,
-    val headers: List<WfHTTPHeader>?,
-    val insecureSkipVerify: Boolean?,
-    val method: String?,
-    val successCondition: String?,
-    val timeoutSeconds: Int?
+    val body: String? = null,
+    val bodyFrom: WfHTTPBodySource? = null,
+    val headers: List<WfHTTPHeader>? = null,
+    val insecureSkipVerify: Boolean? = null,
+    val method: String? = null,
+    val successCondition: String? = null,
+    val timeoutSeconds: Int? = null
 )

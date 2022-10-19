@@ -1,17 +1,17 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvHDFSEventSource(
-    val addresses: List<String>?,
-    val checkInterval: String?,
-    val filter: EvEventSourceFilter?,
-    val hdfsUser: String?,
-    val krbCCacheSecret: CoreSecretKeySelector?,
-    val krbConfigConfigMap: CoreConfigMapKeySelector?,
-    val krbKeytabSecret: CoreSecretKeySelector?,
-    val krbRealm: String?,
-    val krbServicePrincipalName: String?,
-    val krbUsername: String?,
-    val metadata: Map<String, String>?,
-    val type: String?,
-    val watchPathConfig: EvWatchPathConfig?
+    val addresses: List<String>? = null,
+    val checkInterval: String? = null,
+    val filter: EvEventSourceFilter? = null,
+    val hdfsUser: String? = null,
+    val krbCCacheSecret: CoreSecretKeySelector? = null,
+    val krbConfigConfigMap: CoreConfigMapKeySelector? = null,
+    val krbKeytabSecret: CoreSecretKeySelector? = null,
+    val krbRealm: String? = null,
+    val krbServicePrincipalName: String? = null,
+    val krbUsername: String? = null,
+    val metadata: Map<String, String>? = null,
+    val type: String? = null,
+    val watchPathConfig: EvWatchPathConfig? = null
 )

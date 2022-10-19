@@ -1,20 +1,20 @@
 package jp.datable.argo.workflow.client.models
 
 data class MetaObjectMeta(
-    val annotations: Map<String, String>?,
-    val clusterName: String?,
-    val creationTimestamp: String?,
-    val deletionGracePeriodSeconds: Int?,
-    val deletionTimestamp: String?,
-    val finalizers: List<String>?,
-    val generateName: String?,
-    val generation: Int?,
-    val labels: Map<String, String>?,
-    val managedFields: List<MetaManagedFieldsEntry>?,
-    val name: String?,
-    val namespace: String?,
-    val ownerReferences: List<MetaOwnerReference>?,
-    val resourceVersion: String?,
-    val selfLink: String?,
-    val uid: String?
+    val annotations: Map<String, String>? = null,
+    val clusterName: String? = null,
+    val creationTimestamp: String? = null,
+    val deletionGracePeriodSeconds: Int? = null,
+    val deletionTimestamp: String? = null,
+    val finalizers: List<String>? = null,
+    val generateName: String? = null,
+    val generation: Int? = null,
+    val labels: Map<String, String>? = null,
+    val managedFields: List<MetaManagedFieldsEntry>? = null,
+    val name: String? = null,
+    val namespace: String? = null,
+    val ownerReferences: List<MetaOwnerReference>? = null,
+    val resourceVersion: String? = null,
+    val selfLink: String? = null,
+    val uid: String? = null
 )

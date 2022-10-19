@@ -1,3 +1,3 @@
 package jp.datable.argo.workflow.client.models
 
-data class CoreHostPathVolumeSource(val path: String, val type: String?)
+data class CoreHostPathVolumeSource(val path: String, val type: String? = null)

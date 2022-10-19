@@ -4,11 +4,11 @@ data class CoreScaleIOVolumeSource(
     val gateway: String,
     val secretRef: CoreLocalObjectReference,
     val system: String,
-    val fsType: String?,
-    val protectionDomain: String?,
-    val readOnly: Boolean?,
-    val sslEnabled: Boolean?,
-    val storageMode: String?,
-    val storagePool: String?,
-    val volumeName: String?
+    val fsType: String? = null,
+    val protectionDomain: String? = null,
+    val readOnly: Boolean? = null,
+    val sslEnabled: Boolean? = null,
+    val storageMode: String? = null,
+    val storagePool: String? = null,
+    val volumeName: String? = null
 )

@@ -1,15 +1,15 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvGitlabEventSource(
-    val accessToken: CoreSecretKeySelector?,
-    val deleteHookOnFinish: Boolean?,
-    val enableSSLVerification: Boolean?,
-    val events: List<String>?,
-    val filter: EvEventSourceFilter?,
-    val gitlabBaseURL: String?,
-    val metadata: Map<String, String>?,
-    val projectID: String?,
-    val projects: List<String>?,
-    val secretToken: CoreSecretKeySelector?,
-    val webhook: EvWebhookContext?
+    val accessToken: CoreSecretKeySelector? = null,
+    val deleteHookOnFinish: Boolean? = null,
+    val enableSSLVerification: Boolean? = null,
+    val events: List<String>? = null,
+    val filter: EvEventSourceFilter? = null,
+    val gitlabBaseURL: String? = null,
+    val metadata: Map<String, String>? = null,
+    val projectID: String? = null,
+    val projects: List<String>? = null,
+    val secretToken: CoreSecretKeySelector? = null,
+    val webhook: EvWebhookContext? = null
 )

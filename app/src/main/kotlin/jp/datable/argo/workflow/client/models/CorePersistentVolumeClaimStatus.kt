@@ -1,12 +1,12 @@
 package jp.datable.argo.workflow.client.models
 
 data class CorePersistentVolumeClaimStatus(
-    val accessModes: List<String>?,
-    val allocatedResources: Map<String, String>?,
-    val capacity: Map<String, String>?,
-    val conditions: List<CorePersistentVolumeClaimCondition>?,
-    val phase: Phase?,
-    val resizeStatus: String?
+    val accessModes: List<String>? = null,
+    val allocatedResources: Map<String, String>? = null,
+    val capacity: Map<String, String>? = null,
+    val conditions: List<CorePersistentVolumeClaimCondition>? = null,
+    val phase: Phase? = null,
+    val resizeStatus: String? = null
 ) {
 
     /**

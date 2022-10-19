@@ -1,3 +1,3 @@
 package jp.datable.argo.workflow.client.models
 
-data class WfTarStrategy(val compressionLevel: Int?)
+data class WfTarStrategy(val compressionLevel: Int? = null)

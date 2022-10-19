@@ -1,7 +1,7 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfArtifactoryArtifactRepository(
-    val passwordSecret: CoreSecretKeySelector?,
-    val repoURL: String?,
-    val usernameSecret: CoreSecretKeySelector?
+    val passwordSecret: CoreSecretKeySelector? = null,
+    val repoURL: String? = null,
+    val usernameSecret: CoreSecretKeySelector? = null
 )

@@ -1,8 +1,8 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvNATSAuth(
-    val basic: EvBasicAuth?,
-    val credential: CoreSecretKeySelector?,
-    val nkey: CoreSecretKeySelector?,
-    val token: CoreSecretKeySelector?
+    val basic: EvBasicAuth? = null,
+    val credential: CoreSecretKeySelector? = null,
+    val nkey: CoreSecretKeySelector? = null,
+    val token: CoreSecretKeySelector? = null
 )

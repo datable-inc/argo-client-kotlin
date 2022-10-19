@@ -1,13 +1,13 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvStorageGridEventSource(
-    val apiURL: String?,
-    val authToken: CoreSecretKeySelector?,
-    val bucket: String?,
-    val events: List<String>?,
-    val filter: EvStorageGridFilter?,
-    val metadata: Map<String, String>?,
-    val region: String?,
-    val topicArn: String?,
-    val webhook: EvWebhookContext?
+    val apiURL: String? = null,
+    val authToken: CoreSecretKeySelector? = null,
+    val bucket: String? = null,
+    val events: List<String>? = null,
+    val filter: EvStorageGridFilter? = null,
+    val metadata: Map<String, String>? = null,
+    val region: String? = null,
+    val topicArn: String? = null,
+    val webhook: EvWebhookContext? = null
 )

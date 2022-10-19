@@ -3,7 +3,7 @@ package jp.datable.argo.workflow.client.models
 data class CoreNodeSelectorRequirement(
     val key: String,
     val `operator`: CoreNodeSelectorRequirement.`Operator`,
-    val propertyValues: List<String>?
+    val propertyValues: List<String>? = null
 ) {
 
     /**

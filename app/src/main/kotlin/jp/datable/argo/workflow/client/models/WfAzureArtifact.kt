@@ -4,6 +4,6 @@ data class WfAzureArtifact(
     val blob: String,
     val container: String,
     val endpoint: String,
-    val accountKeySecret: CoreSecretKeySelector?,
-    val useSDKCreds: Boolean?
+    val accountKeySecret: CoreSecretKeySelector? = null,
+    val useSDKCreds: Boolean? = null
 )

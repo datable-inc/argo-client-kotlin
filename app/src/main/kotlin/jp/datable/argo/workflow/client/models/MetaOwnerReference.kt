@@ -5,6 +5,6 @@ data class MetaOwnerReference(
     val kind: String,
     val name: String,
     val uid: String,
-    val blockOwnerDeletion: Boolean?,
-    val controller: Boolean?
+    val blockOwnerDeletion: Boolean? = null,
+    val controller: Boolean? = null
 )

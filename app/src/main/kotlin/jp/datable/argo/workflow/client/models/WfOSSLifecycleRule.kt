@@ -1,6 +1,6 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfOSSLifecycleRule(
-    val markDeletionAfterDays: Int?,
-    val markInfrequentAccessAfterDays: Int?
+    val markDeletionAfterDays: Int? = null,
+    val markInfrequentAccessAfterDays: Int? = null
 )

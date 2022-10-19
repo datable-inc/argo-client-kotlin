@@ -1,9 +1,9 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvNATSTrigger(
-    val parameters: List<EvTriggerParameter>?,
-    val payload: List<EvTriggerParameter>?,
-    val subject: String?,
-    val tls: EvTLSConfig?,
-    val url: String?
+    val parameters: List<EvTriggerParameter>? = null,
+    val payload: List<EvTriggerParameter>? = null,
+    val subject: String? = null,
+    val tls: EvTLSConfig? = null,
+    val url: String? = null
 )

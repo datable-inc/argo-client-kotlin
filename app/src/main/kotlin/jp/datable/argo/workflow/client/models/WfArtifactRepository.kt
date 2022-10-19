@@ -1,11 +1,11 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfArtifactRepository(
-    val archiveLogs: Boolean?,
-    val artifactory: WfArtifactoryArtifactRepository?,
-    val azure: WfAzureArtifactRepository?,
-    val gcs: WfGCSArtifactRepository?,
-    val hdfs: WfHDFSArtifactRepository?,
-    val oss: WfOSSArtifactRepository?,
-    val s3: WfS3ArtifactRepository?
+    val archiveLogs: Boolean? = null,
+    val artifactory: WfArtifactoryArtifactRepository? = null,
+    val azure: WfAzureArtifactRepository? = null,
+    val gcs: WfGCSArtifactRepository? = null,
+    val hdfs: WfHDFSArtifactRepository? = null,
+    val oss: WfOSSArtifactRepository? = null,
+    val s3: WfS3ArtifactRepository? = null
 )

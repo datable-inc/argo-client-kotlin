@@ -1,11 +1,11 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvArtifactLocation(
-    val configmap: CoreConfigMapKeySelector?,
-    val file: EvFileArtifact?,
-    val git: EvGitArtifact?,
-    val `inline`: String?,
-    val resource: EvResource?,
-    val s3: EvS3Artifact?,
-    val url: EvURLArtifact?
+    val configmap: CoreConfigMapKeySelector? = null,
+    val file: EvFileArtifact? = null,
+    val git: EvGitArtifact? = null,
+    val `inline`: String? = null,
+    val resource: EvResource? = null,
+    val s3: EvS3Artifact? = null,
+    val url: EvURLArtifact? = null
 )

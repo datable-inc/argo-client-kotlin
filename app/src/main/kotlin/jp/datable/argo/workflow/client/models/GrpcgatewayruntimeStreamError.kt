@@ -1,9 +1,9 @@
 package jp.datable.argo.workflow.client.models
 
 data class GrpcgatewayruntimeStreamError(
-    val details: List<GoogleprotobufAny>?,
-    val grpcCode: Int?,
-    val httpCode: Int?,
-    val httpStatus: String?,
-    val message: String?
+    val details: List<GoogleprotobufAny>? = null,
+    val grpcCode: Int? = null,
+    val httpCode: Int? = null,
+    val httpStatus: String? = null,
+    val message: String? = null
 )

@@ -1,12 +1,12 @@
 package jp.datable.argo.workflow.client.models
 
 data class CorePersistentVolumeClaimSpec(
-    val accessModes: List<String>?,
-    val dataSource: CoreTypedLocalObjectReference?,
-    val dataSourceRef: CoreTypedLocalObjectReference?,
-    val resources: CoreResourceRequirements?,
-    val selector: MetaLabelSelector?,
-    val storageClassName: String?,
-    val volumeMode: String?,
-    val volumeName: String?
+    val accessModes: List<String>? = null,
+    val dataSource: CoreTypedLocalObjectReference? = null,
+    val dataSourceRef: CoreTypedLocalObjectReference? = null,
+    val resources: CoreResourceRequirements? = null,
+    val selector: MetaLabelSelector? = null,
+    val storageClassName: String? = null,
+    val volumeMode: String? = null,
+    val volumeName: String? = null
 )

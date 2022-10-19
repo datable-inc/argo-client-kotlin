@@ -1,9 +1,9 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvAMQPConsumeConfig(
-    val autoAck: Boolean?,
-    val consumerTag: String?,
-    val exclusive: Boolean?,
-    val noLocal: Boolean?,
-    val noWait: Boolean?
+    val autoAck: Boolean? = null,
+    val consumerTag: String? = null,
+    val exclusive: Boolean? = null,
+    val noLocal: Boolean? = null,
+    val noWait: Boolean? = null
 )

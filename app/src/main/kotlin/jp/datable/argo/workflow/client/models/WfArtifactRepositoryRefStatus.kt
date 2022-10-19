@@ -1,9 +1,9 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfArtifactRepositoryRefStatus(
-    val artifactRepository: WfArtifactRepository?,
-    val configMap: String?,
-    val default: Boolean?,
-    val key: String?,
-    val namespace: String?
+    val artifactRepository: WfArtifactRepository? = null,
+    val configMap: String? = null,
+    val default: Boolean? = null,
+    val key: String? = null,
+    val namespace: String? = null
 )

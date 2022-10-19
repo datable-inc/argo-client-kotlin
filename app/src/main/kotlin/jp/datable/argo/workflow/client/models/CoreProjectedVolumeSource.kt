@@ -1,6 +1,6 @@
 package jp.datable.argo.workflow.client.models
 
 data class CoreProjectedVolumeSource(
-    val defaultMode: Int?,
-    val sources: List<CoreVolumeProjection>?
+    val defaultMode: Int? = null,
+    val sources: List<CoreVolumeProjection>? = null
 )

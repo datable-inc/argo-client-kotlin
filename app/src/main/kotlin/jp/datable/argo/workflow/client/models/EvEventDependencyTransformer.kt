@@ -1,3 +1,3 @@
 package jp.datable.argo.workflow.client.models
 
-data class EvEventDependencyTransformer(val jq: String?, val script: String?)
+data class EvEventDependencyTransformer(val jq: String? = null, val script: String? = null)

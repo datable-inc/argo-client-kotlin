@@ -1,13 +1,13 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfValueFrom(
-    val configMapKeyRef: CoreConfigMapKeySelector?,
-    val default: String?,
-    val event: String?,
-    val expression: String?,
-    val jqFilter: String?,
-    val jsonPath: String?,
-    val parameter: String?,
-    val path: String?,
-    val supplied: Any?
+    val configMapKeyRef: CoreConfigMapKeySelector? = null,
+    val default: String? = null,
+    val event: String? = null,
+    val expression: String? = null,
+    val jqFilter: String? = null,
+    val jsonPath: String? = null,
+    val parameter: String? = null,
+    val path: String? = null,
+    val supplied: Any? = null
 )

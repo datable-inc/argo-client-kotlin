@@ -3,11 +3,11 @@ package jp.datable.argo.workflow.client.models
 data class WfCronWorkflowSpec(
     val schedule: String,
     val workflowSpec: WfWorkflowSpec,
-    val concurrencyPolicy: String?,
-    val failedJobsHistoryLimit: Int?,
-    val startingDeadlineSeconds: Int?,
-    val successfulJobsHistoryLimit: Int?,
-    val `suspend`: Boolean?,
-    val timezone: String?,
-    val workflowMetadata: MetaObjectMeta?
+    val concurrencyPolicy: String? = null,
+    val failedJobsHistoryLimit: Int? = null,
+    val startingDeadlineSeconds: Int? = null,
+    val successfulJobsHistoryLimit: Int? = null,
+    val `suspend`: Boolean? = null,
+    val timezone: String? = null,
+    val workflowMetadata: MetaObjectMeta? = null
 )

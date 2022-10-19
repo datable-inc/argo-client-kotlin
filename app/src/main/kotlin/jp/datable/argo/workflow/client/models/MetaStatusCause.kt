@@ -1,3 +1,7 @@
 package jp.datable.argo.workflow.client.models
 
-data class MetaStatusCause(val `field`: String?, val message: String?, val reason: String?)
+data class MetaStatusCause(
+    val `field`: String? = null,
+    val message: String? = null,
+    val reason: String? = null
+)

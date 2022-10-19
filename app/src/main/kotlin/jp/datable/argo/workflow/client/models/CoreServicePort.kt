@@ -2,11 +2,11 @@ package jp.datable.argo.workflow.client.models
 
 data class CoreServicePort(
     val port: Int,
-    val appProtocol: String?,
-    val name: String?,
-    val nodePort: Int?,
-    val protocol: Protocol?,
-    val targetPort: String?
+    val appProtocol: String? = null,
+    val name: String? = null,
+    val nodePort: Int? = null,
+    val protocol: Protocol? = null,
+    val targetPort: String? = null
 ) {
 
     /**

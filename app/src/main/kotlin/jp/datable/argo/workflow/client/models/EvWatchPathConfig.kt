@@ -1,3 +1,7 @@
 package jp.datable.argo.workflow.client.models
 
-data class EvWatchPathConfig(val directory: String?, val path: String?, val pathRegexp: String?)
+data class EvWatchPathConfig(
+    val directory: String? = null,
+    val path: String? = null,
+    val pathRegexp: String? = null
+)

@@ -1,11 +1,11 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfGetUserInfoResponse(
-    val email: String?,
-    val emailVerified: Boolean?,
-    val groups: List<String>?,
-    val issuer: String?,
-    val serviceAccountName: String?,
-    val serviceAccountNamespace: String?,
-    val subject: String?
+    val email: String? = null,
+    val emailVerified: Boolean? = null,
+    val groups: List<String>? = null,
+    val issuer: String? = null,
+    val serviceAccountName: String? = null,
+    val serviceAccountNamespace: String? = null,
+    val subject: String? = null
 )

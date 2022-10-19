@@ -2,10 +2,10 @@ package jp.datable.argo.workflow.client.models
 
 data class CoreContainerPort(
     val containerPort: Int,
-    val hostIP: String?,
-    val hostPort: Int?,
-    val name: String?,
-    val protocol: Protocol?
+    val hostIP: String? = null,
+    val hostPort: Int? = null,
+    val name: String? = null,
+    val protocol: Protocol? = null
 ) {
 
     /**

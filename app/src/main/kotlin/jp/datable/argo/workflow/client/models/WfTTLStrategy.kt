@@ -1,7 +1,7 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfTTLStrategy(
-    val secondsAfterCompletion: Int?,
-    val secondsAfterFailure: Int?,
-    val secondsAfterSuccess: Int?
+    val secondsAfterCompletion: Int? = null,
+    val secondsAfterFailure: Int? = null,
+    val secondsAfterSuccess: Int? = null
 )

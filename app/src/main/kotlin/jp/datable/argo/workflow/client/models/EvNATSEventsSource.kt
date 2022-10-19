@@ -1,12 +1,12 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvNATSEventsSource(
-    val auth: EvNATSAuth?,
-    val connectionBackoff: EvBackoff?,
-    val filter: EvEventSourceFilter?,
-    val jsonBody: Boolean?,
-    val metadata: Map<String, String>?,
-    val subject: String?,
-    val tls: EvTLSConfig?,
-    val url: String?
+    val auth: EvNATSAuth? = null,
+    val connectionBackoff: EvBackoff? = null,
+    val filter: EvEventSourceFilter? = null,
+    val jsonBody: Boolean? = null,
+    val metadata: Map<String, String>? = null,
+    val subject: String? = null,
+    val tls: EvTLSConfig? = null,
+    val url: String? = null
 )

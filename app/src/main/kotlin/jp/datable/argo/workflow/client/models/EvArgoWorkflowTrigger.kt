@@ -1,8 +1,8 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvArgoWorkflowTrigger(
-    val args: List<String>?,
-    val operation: String?,
-    val parameters: List<EvTriggerParameter>?,
-    val source: EvArtifactLocation?
+    val args: List<String>? = null,
+    val operation: String? = null,
+    val parameters: List<EvTriggerParameter>? = null,
+    val source: EvArtifactLocation? = null
 )

@@ -1,10 +1,10 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvAMQPQueueDeclareConfig(
-    val arguments: String?,
-    val autoDelete: Boolean?,
-    val durable: Boolean?,
-    val exclusive: Boolean?,
-    val name: String?,
-    val noWait: Boolean?
+    val arguments: String? = null,
+    val autoDelete: Boolean? = null,
+    val durable: Boolean? = null,
+    val exclusive: Boolean? = null,
+    val name: String? = null,
+    val noWait: Boolean? = null
 )

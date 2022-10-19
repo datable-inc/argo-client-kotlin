@@ -1,17 +1,17 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvKafkaEventSource(
-    val config: String?,
-    val connectionBackoff: EvBackoff?,
-    val consumerGroup: EvKafkaConsumerGroup?,
-    val filter: EvEventSourceFilter?,
-    val jsonBody: Boolean?,
-    val limitEventsPerSecond: String?,
-    val metadata: Map<String, String>?,
-    val partition: String?,
-    val sasl: EvSASLConfig?,
-    val tls: EvTLSConfig?,
-    val topic: String?,
-    val url: String?,
-    val version: String?
+    val config: String? = null,
+    val connectionBackoff: EvBackoff? = null,
+    val consumerGroup: EvKafkaConsumerGroup? = null,
+    val filter: EvEventSourceFilter? = null,
+    val jsonBody: Boolean? = null,
+    val limitEventsPerSecond: String? = null,
+    val metadata: Map<String, String>? = null,
+    val partition: String? = null,
+    val sasl: EvSASLConfig? = null,
+    val tls: EvTLSConfig? = null,
+    val topic: String? = null,
+    val url: String? = null,
+    val version: String? = null
 )

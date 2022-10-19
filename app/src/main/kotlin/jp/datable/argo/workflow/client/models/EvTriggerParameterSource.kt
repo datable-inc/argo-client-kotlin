@@ -1,10 +1,10 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvTriggerParameterSource(
-    val contextKey: String?,
-    val contextTemplate: String?,
-    val dataKey: String?,
-    val dataTemplate: String?,
-    val dependencyName: String?,
-    val `value`: String?
+    val contextKey: String? = null,
+    val contextTemplate: String? = null,
+    val dataKey: String? = null,
+    val dataTemplate: String? = null,
+    val dependencyName: String? = null,
+    val `value`: String? = null
 )

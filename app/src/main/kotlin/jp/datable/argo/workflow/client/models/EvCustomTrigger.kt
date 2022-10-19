@@ -1,11 +1,11 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvCustomTrigger(
-    val certSecret: CoreSecretKeySelector?,
-    val parameters: List<EvTriggerParameter>?,
-    val payload: List<EvTriggerParameter>?,
-    val secure: Boolean?,
-    val serverNameOverride: String?,
-    val serverURL: String?,
-    val spec: Map<String, String>?
+    val certSecret: CoreSecretKeySelector? = null,
+    val parameters: List<EvTriggerParameter>? = null,
+    val payload: List<EvTriggerParameter>? = null,
+    val secure: Boolean? = null,
+    val serverNameOverride: String? = null,
+    val serverURL: String? = null,
+    val spec: Map<String, String>? = null
 )

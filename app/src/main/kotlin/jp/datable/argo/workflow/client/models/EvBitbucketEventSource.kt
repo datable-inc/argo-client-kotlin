@@ -1,14 +1,14 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvBitbucketEventSource(
-    val auth: EvBitbucketAuth?,
-    val deleteHookOnFinish: Boolean?,
-    val events: List<String>?,
-    val filter: EvEventSourceFilter?,
-    val metadata: Map<String, String>?,
-    val owner: String?,
-    val projectKey: String?,
-    val repositories: List<EvBitbucketRepository>?,
-    val repositorySlug: String?,
-    val webhook: EvWebhookContext?
+    val auth: EvBitbucketAuth? = null,
+    val deleteHookOnFinish: Boolean? = null,
+    val events: List<String>? = null,
+    val filter: EvEventSourceFilter? = null,
+    val metadata: Map<String, String>? = null,
+    val owner: String? = null,
+    val projectKey: String? = null,
+    val repositories: List<EvBitbucketRepository>? = null,
+    val repositorySlug: String? = null,
+    val webhook: EvWebhookContext? = null
 )

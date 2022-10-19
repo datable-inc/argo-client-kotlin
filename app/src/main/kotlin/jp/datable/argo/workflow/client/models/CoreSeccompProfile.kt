@@ -1,6 +1,9 @@
 package jp.datable.argo.workflow.client.models
 
-data class CoreSeccompProfile(val type: CoreSeccompProfile.Type, val localhostProfile: String?) {
+data class CoreSeccompProfile(
+    val type: CoreSeccompProfile.Type,
+    val localhostProfile: String? = null
+) {
 
     /**
      * type indicates which kind of seccomp profile will be applied. Valid options are: Localhost - a

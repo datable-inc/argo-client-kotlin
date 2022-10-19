@@ -4,12 +4,12 @@ data class CoreISCSIVolumeSource(
     val iqn: String,
     val lun: Int,
     val targetPortal: String,
-    val chapAuthDiscovery: Boolean?,
-    val chapAuthSession: Boolean?,
-    val fsType: String?,
-    val initiatorName: String?,
-    val iscsiInterface: String?,
-    val portals: List<String>?,
-    val readOnly: Boolean?,
-    val secretRef: CoreLocalObjectReference?
+    val chapAuthDiscovery: Boolean? = null,
+    val chapAuthSession: Boolean? = null,
+    val fsType: String? = null,
+    val initiatorName: String? = null,
+    val iscsiInterface: String? = null,
+    val portals: List<String>? = null,
+    val readOnly: Boolean? = null,
+    val secretRef: CoreLocalObjectReference? = null
 )

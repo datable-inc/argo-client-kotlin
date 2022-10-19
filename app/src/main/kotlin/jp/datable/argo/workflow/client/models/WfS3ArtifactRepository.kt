@@ -1,16 +1,16 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfS3ArtifactRepository(
-    val accessKeySecret: CoreSecretKeySelector?,
-    val bucket: String?,
-    val createBucketIfNotPresent: WfCreateS3BucketOptions?,
-    val encryptionOptions: WfS3EncryptionOptions?,
-    val endpoint: String?,
-    val insecure: Boolean?,
-    val keyFormat: String?,
-    val keyPrefix: String?,
-    val region: String?,
-    val roleARN: String?,
-    val secretKeySecret: CoreSecretKeySelector?,
-    val useSDKCreds: Boolean?
+    val accessKeySecret: CoreSecretKeySelector? = null,
+    val bucket: String? = null,
+    val createBucketIfNotPresent: WfCreateS3BucketOptions? = null,
+    val encryptionOptions: WfS3EncryptionOptions? = null,
+    val endpoint: String? = null,
+    val insecure: Boolean? = null,
+    val keyFormat: String? = null,
+    val keyPrefix: String? = null,
+    val region: String? = null,
+    val roleARN: String? = null,
+    val secretKeySecret: CoreSecretKeySelector? = null,
+    val useSDKCreds: Boolean? = null
 )

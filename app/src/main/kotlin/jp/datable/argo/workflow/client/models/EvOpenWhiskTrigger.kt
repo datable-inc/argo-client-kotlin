@@ -1,11 +1,11 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvOpenWhiskTrigger(
-    val actionName: String?,
-    val authToken: CoreSecretKeySelector?,
-    val host: String?,
-    val namespace: String?,
-    val parameters: List<EvTriggerParameter>?,
-    val payload: List<EvTriggerParameter>?,
-    val version: String?
+    val actionName: String? = null,
+    val authToken: CoreSecretKeySelector? = null,
+    val host: String? = null,
+    val namespace: String? = null,
+    val parameters: List<EvTriggerParameter>? = null,
+    val payload: List<EvTriggerParameter>? = null,
+    val version: String? = null
 )

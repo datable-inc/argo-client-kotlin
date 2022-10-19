@@ -1,14 +1,14 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvPulsarTrigger(
-    val authTokenSecret: CoreSecretKeySelector?,
-    val connectionBackoff: EvBackoff?,
-    val parameters: List<EvTriggerParameter>?,
-    val payload: List<EvTriggerParameter>?,
-    val tls: EvTLSConfig?,
-    val tlsAllowInsecureConnection: Boolean?,
-    val tlsTrustCertsSecret: CoreSecretKeySelector?,
-    val tlsValidateHostname: Boolean?,
-    val topic: String?,
-    val url: String?
+    val authTokenSecret: CoreSecretKeySelector? = null,
+    val connectionBackoff: EvBackoff? = null,
+    val parameters: List<EvTriggerParameter>? = null,
+    val payload: List<EvTriggerParameter>? = null,
+    val tls: EvTLSConfig? = null,
+    val tlsAllowInsecureConnection: Boolean? = null,
+    val tlsTrustCertsSecret: CoreSecretKeySelector? = null,
+    val tlsValidateHostname: Boolean? = null,
+    val topic: String? = null,
+    val url: String? = null
 )

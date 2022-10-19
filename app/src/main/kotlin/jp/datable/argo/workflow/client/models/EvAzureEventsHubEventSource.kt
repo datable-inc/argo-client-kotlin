@@ -1,10 +1,10 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvAzureEventsHubEventSource(
-    val filter: EvEventSourceFilter?,
-    val fqdn: String?,
-    val hubName: String?,
-    val metadata: Map<String, String>?,
-    val sharedAccessKey: CoreSecretKeySelector?,
-    val sharedAccessKeyName: CoreSecretKeySelector?
+    val filter: EvEventSourceFilter? = null,
+    val fqdn: String? = null,
+    val hubName: String? = null,
+    val metadata: Map<String, String>? = null,
+    val sharedAccessKey: CoreSecretKeySelector? = null,
+    val sharedAccessKeyName: CoreSecretKeySelector? = null
 )

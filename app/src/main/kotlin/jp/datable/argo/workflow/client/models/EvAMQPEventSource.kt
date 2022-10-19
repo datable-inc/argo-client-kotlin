@@ -1,19 +1,19 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvAMQPEventSource(
-    val auth: EvBasicAuth?,
-    val connectionBackoff: EvBackoff?,
-    val consume: EvAMQPConsumeConfig?,
-    val exchangeDeclare: EvAMQPExchangeDeclareConfig?,
-    val exchangeName: String?,
-    val exchangeType: String?,
-    val filter: EvEventSourceFilter?,
-    val jsonBody: Boolean?,
-    val metadata: Map<String, String>?,
-    val queueBind: EvAMQPQueueBindConfig?,
-    val queueDeclare: EvAMQPQueueDeclareConfig?,
-    val routingKey: String?,
-    val tls: EvTLSConfig?,
-    val url: String?,
-    val urlSecret: CoreSecretKeySelector?
+    val auth: EvBasicAuth? = null,
+    val connectionBackoff: EvBackoff? = null,
+    val consume: EvAMQPConsumeConfig? = null,
+    val exchangeDeclare: EvAMQPExchangeDeclareConfig? = null,
+    val exchangeName: String? = null,
+    val exchangeType: String? = null,
+    val filter: EvEventSourceFilter? = null,
+    val jsonBody: Boolean? = null,
+    val metadata: Map<String, String>? = null,
+    val queueBind: EvAMQPQueueBindConfig? = null,
+    val queueDeclare: EvAMQPQueueDeclareConfig? = null,
+    val routingKey: String? = null,
+    val tls: EvTLSConfig? = null,
+    val url: String? = null,
+    val urlSecret: CoreSecretKeySelector? = null
 )

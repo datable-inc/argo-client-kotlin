@@ -1,9 +1,9 @@
 package jp.datable.argo.workflow.client.models
 
 data class CoreStorageOSVolumeSource(
-    val fsType: String?,
-    val readOnly: Boolean?,
-    val secretRef: CoreLocalObjectReference?,
-    val volumeName: String?,
-    val volumeNamespace: String?
+    val fsType: String? = null,
+    val readOnly: Boolean? = null,
+    val secretRef: CoreLocalObjectReference? = null,
+    val volumeName: String? = null,
+    val volumeNamespace: String? = null
 )

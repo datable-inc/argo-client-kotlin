@@ -1,9 +1,9 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvCondition(
-    val lastTransitionTime: String?,
-    val message: String?,
-    val reason: String?,
-    val status: String?,
-    val type: String?
+    val lastTransitionTime: String? = null,
+    val message: String? = null,
+    val reason: String? = null,
+    val status: String? = null,
+    val type: String? = null
 )

@@ -1,15 +1,15 @@
 package jp.datable.argo.workflow.client.models
 
 data class CoreSecurityContext(
-    val allowPrivilegeEscalation: Boolean?,
-    val capabilities: CoreCapabilities?,
-    val privileged: Boolean?,
-    val procMount: String?,
-    val readOnlyRootFilesystem: Boolean?,
-    val runAsGroup: Int?,
-    val runAsNonRoot: Boolean?,
-    val runAsUser: Int?,
-    val seLinuxOptions: CoreSELinuxOptions?,
-    val seccompProfile: CoreSeccompProfile?,
-    val windowsOptions: CoreWindowsSecurityContextOptions?
+    val allowPrivilegeEscalation: Boolean? = null,
+    val capabilities: CoreCapabilities? = null,
+    val privileged: Boolean? = null,
+    val procMount: String? = null,
+    val readOnlyRootFilesystem: Boolean? = null,
+    val runAsGroup: Int? = null,
+    val runAsNonRoot: Boolean? = null,
+    val runAsUser: Int? = null,
+    val seLinuxOptions: CoreSELinuxOptions? = null,
+    val seccompProfile: CoreSeccompProfile? = null,
+    val windowsOptions: CoreWindowsSecurityContextOptions? = null
 )

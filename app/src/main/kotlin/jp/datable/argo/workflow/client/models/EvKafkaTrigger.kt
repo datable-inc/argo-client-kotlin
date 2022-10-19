@@ -1,16 +1,16 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvKafkaTrigger(
-    val compress: Boolean?,
-    val flushFrequency: Int?,
-    val parameters: List<EvTriggerParameter>?,
-    val partition: Int?,
-    val partitioningKey: String?,
-    val payload: List<EvTriggerParameter>?,
-    val requiredAcks: Int?,
-    val sasl: EvSASLConfig?,
-    val tls: EvTLSConfig?,
-    val topic: String?,
-    val url: String?,
-    val version: String?
+    val compress: Boolean? = null,
+    val flushFrequency: Int? = null,
+    val parameters: List<EvTriggerParameter>? = null,
+    val partition: Int? = null,
+    val partitioningKey: String? = null,
+    val payload: List<EvTriggerParameter>? = null,
+    val requiredAcks: Int? = null,
+    val sasl: EvSASLConfig? = null,
+    val tls: EvTLSConfig? = null,
+    val topic: String? = null,
+    val url: String? = null,
+    val version: String? = null
 )

@@ -1,11 +1,11 @@
 package jp.datable.argo.workflow.client.models
 
 data class CoreObjectReference(
-    val apiVersion: String?,
-    val fieldPath: String?,
-    val kind: String?,
-    val name: String?,
-    val namespace: String?,
-    val resourceVersion: String?,
-    val uid: String?
+    val apiVersion: String? = null,
+    val fieldPath: String? = null,
+    val kind: String? = null,
+    val name: String? = null,
+    val namespace: String? = null,
+    val resourceVersion: String? = null,
+    val uid: String? = null
 )

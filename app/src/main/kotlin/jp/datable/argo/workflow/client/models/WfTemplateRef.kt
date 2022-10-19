@@ -1,3 +1,7 @@
 package jp.datable.argo.workflow.client.models
 
-data class WfTemplateRef(val clusterScope: Boolean?, val name: String?, val template: String?)
+data class WfTemplateRef(
+    val clusterScope: Boolean? = null,
+    val name: String? = null,
+    val template: String? = null
+)

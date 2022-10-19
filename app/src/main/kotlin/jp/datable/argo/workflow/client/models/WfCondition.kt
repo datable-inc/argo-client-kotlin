@@ -1,3 +1,7 @@
 package jp.datable.argo.workflow.client.models
 
-data class WfCondition(val message: String?, val status: String?, val type: String?)
+data class WfCondition(
+    val message: String? = null,
+    val status: String? = null,
+    val type: String? = null
+)

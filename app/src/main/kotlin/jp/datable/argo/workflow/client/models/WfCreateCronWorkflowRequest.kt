@@ -1,7 +1,7 @@
 package jp.datable.argo.workflow.client.models
 
 data class WfCreateCronWorkflowRequest(
-    val createOptions: MetaCreateOptions?,
-    val cronWorkflow: WfCronWorkflow?,
-    val namespace: String?
+    val createOptions: MetaCreateOptions? = null,
+    val cronWorkflow: WfCronWorkflow? = null,
+    val namespace: String? = null
 )

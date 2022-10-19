@@ -1,11 +1,11 @@
 package jp.datable.argo.workflow.client.models
 
 data class EvGenericEventSource(
-    val authSecret: CoreSecretKeySelector?,
-    val config: String?,
-    val filter: EvEventSourceFilter?,
-    val insecure: Boolean?,
-    val jsonBody: Boolean?,
-    val metadata: Map<String, String>?,
-    val url: String?
+    val authSecret: CoreSecretKeySelector? = null,
+    val config: String? = null,
+    val filter: EvEventSourceFilter? = null,
+    val insecure: Boolean? = null,
+    val jsonBody: Boolean? = null,
+    val metadata: Map<String, String>? = null,
+    val url: String? = null
 )
