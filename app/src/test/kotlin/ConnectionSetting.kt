@@ -14,5 +14,10 @@ class ConnectionSetting {
     }
 
     @Serializable
-    data class Setting(val host: String, @SerialName("bearer-token") val bearerToken: String)
+    data class Setting(
+        val host: String,
+        @SerialName("bearer-token") val bearerToken: String,
+        @SerialName("event-source-namespace") val eventSourceNamespace: String,
+        @SerialName("event-source-name") val eventSourceName: String
+    )
 }
