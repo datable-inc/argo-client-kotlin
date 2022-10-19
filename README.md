@@ -5,8 +5,8 @@
 
 # Api List
 
-Api | Method | HTTP request |
-------------- |------------- | ------------- |
+Api | Method              | HTTP request                                          |
+------------- |---------------------|-------------------------------------------------------|
 WorkflowApi     | getWorkflow         | GET /api/v1/workflows/{namespace}/{name}              |
 WorkflowApi     | getWorkflows        | GET /api/v1/workflows/{namespace}                     |
 WorkflowApi     | createWorkflow      | POST /api/v1/workflows/{namespace}                    |
@@ -16,6 +16,9 @@ CronWorkflowApi | createCronWorkflow  | POST /api/v1/cron-workflows/{namespace} 
 CronWorkflowApi | suspendCronWorkflow | PUT /api/v1/cron-workflows/{namespace}/{name}/suspend |
 CronWorkflowApi | resumeCronWorkflow  | PUT /api/v1/cron-workflows/{namespace}/{name}/resume  |
 CronWorkflowApi | deleteCronWorkflow  | DELETE /api/v1/cron-workflows/{namespace}/{name}      |
+EventSourceApi  | getEventSources     | GET /api/v1/event-sources/{namespace}/                |
+EventSourceApi  | updateEventSource   | PUT /api/v1/event-sources/{namespace}/{name}          |
+SensorApi       | createSensor        | POST /api/v1/sensors/{namespace}/{name}               |
 
 # Example
 
