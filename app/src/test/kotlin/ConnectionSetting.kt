@@ -18,6 +18,7 @@ class ConnectionSetting {
         val host: String,
         @SerialName("bearer-token") val bearerToken: String,
         @SerialName("event-source-namespace") val eventSourceNamespace: String,
-        @SerialName("event-source-name") val eventSourceName: String
+        @SerialName("event-source-name") val eventSourceName: String,
+        @SerialName("sensor-name") val sensorName: String
     )
 }

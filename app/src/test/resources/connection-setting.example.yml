@@ -2,3 +2,4 @@ host: your host name
 bearer-token: your bearer token
 event-source-namespace: your event source namespace
 event-source-name: your event source namespace
+sensor-name: your sensor name

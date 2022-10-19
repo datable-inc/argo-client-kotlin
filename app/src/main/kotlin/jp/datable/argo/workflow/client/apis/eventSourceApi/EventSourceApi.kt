@@ -43,7 +43,7 @@ class EventSourceApi(httpClient: HttpClient) : BaseApi(httpClient) {
         return updateEventSourceWithHttpInfo(namespace, name, body)
     }
 
-    private fun updateEventSourcesCall(
+    private fun updateEventSourceCall(
         namespace: String,
         name: String,
         body: EventsourceUpdateEventSourceRequest
@@ -57,7 +57,7 @@ class EventSourceApi(httpClient: HttpClient) : BaseApi(httpClient) {
         name: String,
         body: EventsourceUpdateEventSourceRequest
     ): Result<HttpResponse<EvEventSource>, Exception> {
-        return updateEventSourcesCall(namespace, name, body).andThen {
+        return updateEventSourceCall(namespace, name, body).andThen {
             httpClient.execute(it, EvEventSource::class.java)
         }
     }
