@@ -35,7 +35,7 @@ dependencies {
     // This dependency is used by the application.
     implementation("com.google.guava:guava:31.1-jre")
 
-    implementation("com.michael-bull.kotlin-result:kotlin-result:1.1.14")
+    implementation("com.michael-bull.kotlin-result:kotlin-result:1.1.21")
     implementation("com.squareup.okhttp3:okhttp:4.9.3")
     implementation("org.springframework:spring-web:5.3.18")
 
